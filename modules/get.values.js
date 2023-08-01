@@ -109,7 +109,7 @@ export function getInfo() {
      } else if (selectGender.value == "1" && selectSpouse.value == "6") {
           genderStatus = "em união estável";
      } else if (selectGender.value == "1" && selectSpouse.value == "7") {
-          genderStatus = "viuvo";
+          genderStatus = "viúvo";
      } else if (selectGender.value == "2" && selectSpouse.value == "1") {
           genderStatus = "casada";
      } else if (selectGender.value == "2" && selectSpouse.value == "2") {

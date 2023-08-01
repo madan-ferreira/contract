@@ -64,25 +64,25 @@ window.onload = function gui() {
      optionComuUni.id = "option-universal-communion";
      optionComuUni.value = "1";
      document.getElementById("select-spouse").appendChild(optionComuUni);
-     document.getElementById("option-universal-communion").innerHTML = "Casado regime de comunhão univesal de bens";
+     document.getElementById("option-universal-communion").innerHTML = "Casado(a) em regime de comunhão univesal de bens";
 
      optionMarried = document.createElement("option");
      optionMarried.id = "option-married";
      optionMarried.value = "2";
      document.getElementById("select-spouse").appendChild(optionMarried);
-     document.getElementById("option-married").innerHTML = "Casado";
+     document.getElementById("option-married").innerHTML = "Casado(a)";
 
      optionSingle = document.createElement("option");
      optionSingle.id = "option-single";
      optionSingle.value = "3";
      document.getElementById("select-spouse").appendChild(optionSingle);
-     document.getElementById("option-single").innerHTML = "Solteiro";
+     document.getElementById("option-single").innerHTML = "Solteiro(a)";
 
      optionDivorced = document.createElement("option");
      optionDivorced.id = "option-divorced";
      optionDivorced.value = "4";
      document.getElementById("select-spouse").appendChild(optionDivorced);
-     document.getElementById("option-divorced").innerHTML = "Divorciado";
+     document.getElementById("option-divorced").innerHTML = "Divorciado(a)";
 
      optionStableUni = document.createElement("option");
      optionStableUni.id = "option-stable-uni";
@@ -100,7 +100,7 @@ window.onload = function gui() {
      optionWidow.id = "option-widow";
      optionWidow.value = "7";
      document.getElementById("select-spouse").appendChild(optionWidow);
-     document.getElementById("option-widow").innerHTML = "Viuvo(a)";
+     document.getElementById("option-widow").innerHTML = "Viúvo(a)";
      // ###################################### Private individual div #############################################
      var privateLegalContainerBtn = document.createElement("div");
      privateLegalContainerBtn.id = "private-legal-container-btn";
