@@ -3,7 +3,6 @@ import {
      getContractNumber,
      carrier,
      getBirth,
-     getState,
      getDay,
      getMonth,
      born,
@@ -15,7 +14,6 @@ import {
      getCpf,
      getEmail,
      getPrice,
-     getCity,
      genderStatus,
      registered,
      getAg,
@@ -432,6 +430,11 @@ O Franqueado aceita os termos e condições contidos neste anexo.`,
           titleY + 30
      );
      if (selectSpouse.value == "1") {
+          doc.setFontStyle("bold");
+          doc.text(`___________________________________________\n${getFranchisee}\nSELO\n \n ___________________________________________\n${getSpouse}\n(anuente)`, pageWidth / 2 + 30, titleY + 430, {
+               align: "center",
+          });
+     } else if (selectSpouse.value == "5"){
           doc.setFontStyle("bold");
           doc.text(`___________________________________________\n${getFranchisee}\nSELO\n \n ___________________________________________\n${getSpouse}\n(anuente)`, pageWidth / 2 + 30, titleY + 430, {
                align: "center",

@@ -105,9 +105,9 @@ export function getInfo() {
      } else if (selectGender.value == "1" && selectSpouse.value == "4") {
           genderStatus = "divorciado";
      } else if (selectGender.value == "1" && selectSpouse.value == "5") {
-          genderStatus = "em regume de união estável";
+          genderStatus = "em união estável";
      } else if (selectGender.value == "1" && selectSpouse.value == "6") {
-          genderStatus = "em regume de união estável";
+          genderStatus = "em união estável";
      } else if (selectGender.value == "1" && selectSpouse.value == "7") {
           genderStatus = "viuvo";
      } else if (selectGender.value == "2" && selectSpouse.value == "1") {
