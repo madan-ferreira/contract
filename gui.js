@@ -495,16 +495,13 @@ function checkMaritStatusPrivate() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
-
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
-               privateData.style.gridTemplateAreas =
-                    '"contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" ". . foot . ."';
-
                newSpouse.placeholder = "Nome do cônjuge";
                newSpouseCpf.placeholder = "CPF do cônjuge";
-               newSpouseEmail.placeholder = "Email do cônjuge";
                newSpouseRg.placeholder = "RG do cônjuge";
+
+               privateData.style.gridTemplateColumns = "25% 25% 25% 25%";
+               privateData.style.gridTemplateAreas =
+                    '"contract client bank spouse" "contract client bank spouse" "contract client bank spouse" "contract client bank spouse" "contract client bank spouse" "contract client bank spouse" ". foot foot . "';
                break;
           case "2":
                // casado
@@ -515,9 +512,9 @@ function checkMaritStatusPrivate() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "33% 33% 33% 33% 33%";
                privateData.style.gridTemplateAreas =
-                    '". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". . foot . ."';
+                    '"contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" ". foot ."';
                break;
           case "3":
                // solteiro
@@ -528,9 +525,9 @@ function checkMaritStatusPrivate() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "33% 33% 33% 33% 33%";
                privateData.style.gridTemplateAreas =
-                    '". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". . foot . ."';
+                    '"contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" ". foot ."';
                break;
           case "4":
                // Divorciado
@@ -541,9 +538,9 @@ function checkMaritStatusPrivate() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "33% 33% 33% 33% 33%";
                privateData.style.gridTemplateAreas =
-                    '". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". . foot . ."';
+                    '"contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" ". foot ."';
                break;
           case "5":
                // União estável com comunhão universal de bens
@@ -556,16 +553,13 @@ function checkMaritStatusPrivate() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
-
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
-               privateData.style.gridTemplateAreas =
-                    '"contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" "contract client . bank spouse" ". . foot . ."';
-
                newSpouse.placeholder = "Nome do parceiro";
                newSpouseCpf.placeholder = "CPF do parceiro";
-               newSpouseEmail.placeholder = "Email do parceiro";
                newSpouseRg.placeholder = "RG do parceiro";
+
+               privateData.style.gridTemplateColumns = "25% 25% 25% 25%";
+               privateData.style.gridTemplateAreas =
+                    '"contract client bank spouse" "contract client bank spouse" "contract client bank spouse" "contract client bank spouse" "contract client bank spouse" "contract client bank spouse" ". foot foot . "';
                break;
           case "6":
                // União estável
@@ -576,9 +570,9 @@ function checkMaritStatusPrivate() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "33% 33% 33% 33% 33%";
                privateData.style.gridTemplateAreas =
-                    '". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". . foot . ."';
+                    '"contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" ". foot ."';
                break;
 
           case "7":
@@ -590,9 +584,9 @@ function checkMaritStatusPrivate() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "33% 33% 33% 33% 33%";
                privateData.style.gridTemplateAreas =
-                    '". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". contract client bank ." ". . foot . ."';
+                    '"contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" "contract client bank" ". foot ."';
                break;
      }
 }
@@ -642,9 +636,17 @@ function checkMaritStatusLegal() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "25% 25% 25% 25%";
                privateData.style.gridTemplateAreas =
-                    '"contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" ". . foot . ."';
+                    '"contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" ". foot foot . "';
+
+               newHouseN.style.display = "none";
+               newComplement.style.display = "none";
+               newStreet.style.display = "none";
+               newNeighborhood.style.display = "none";
+               newCep.style.display = "none";
+               newcity.style.display = "none";
+               newState.style.display = "none";
                break;
           case "3":
                // solteiro
@@ -655,9 +657,17 @@ function checkMaritStatusLegal() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "25% 25% 25% 25%";
                privateData.style.gridTemplateAreas =
-                    '"contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" ". . foot . ."';
+                    '"contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" ". foot foot . "';
+
+               newHouseN.style.display = "none";
+               newComplement.style.display = "none";
+               newStreet.style.display = "none";
+               newNeighborhood.style.display = "none";
+               newCep.style.display = "none";
+               newcity.style.display = "none";
+               newState.style.display = "none";
                break;
           case "4":
                // divorciado
@@ -668,9 +678,17 @@ function checkMaritStatusLegal() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "25% 25% 25% 25%";
                privateData.style.gridTemplateAreas =
-                    '"contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" ". . foot . ."';
+                    '"contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" ". foot foot . "';
+
+               newHouseN.style.display = "none";
+               newComplement.style.display = "none";
+               newStreet.style.display = "none";
+               newNeighborhood.style.display = "none";
+               newCep.style.display = "none";
+               newcity.style.display = "none";
+               newState.style.display = "none";
                break;
           case "5":
                // União estável com comunhão universal de bens
@@ -689,6 +707,14 @@ function checkMaritStatusLegal() {
                privateData.style.gridTemplateAreas =
                     '"contract client bank spouse comp" "contract client bank spouse comp" "contract client bank spouse comp" "contract client bank spouse comp" "contract client bank spouse comp" "contract client bank spouse comp" ". . foot . ."';
 
+               newHouseN.style.display = "none";
+               newComplement.style.display = "none";
+               newStreet.style.display = "none";
+               newNeighborhood.style.display = "none";
+               newCep.style.display = "none";
+               newcity.style.display = "none";
+               newState.style.display = "none";
+
                newSpouse.placeholder = "Nome do parceiro";
                newSpouseCpf.placeholder = "CPF do parceiro";
                newSpouseEmail.placeholder = "Email do parceiro";
@@ -703,9 +729,17 @@ function checkMaritStatusLegal() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "25% 25% 25% 25%";
                privateData.style.gridTemplateAreas =
-                    '"contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" ". . foot . ."';
+                    '"contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" ". foot foot . "';
+
+               newHouseN.style.display = "none";
+               newComplement.style.display = "none";
+               newStreet.style.display = "none";
+               newNeighborhood.style.display = "none";
+               newCep.style.display = "none";
+               newcity.style.display = "none";
+               newState.style.display = "none";
                break;
           case "7":
                // viuvo(a)
@@ -716,9 +750,17 @@ function checkMaritStatusLegal() {
 
                bankDataContainer.style.display = "flex";
 
-               privateData.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
+               privateData.style.gridTemplateColumns = "25% 25% 25% 25%";
                privateData.style.gridTemplateAreas =
-                    '"contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" "contract client . bank comp" ". . foot . ."';
+                    '"contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" "contract client bank comp" ". foot foot . "';
+
+               newHouseN.style.display = "none";
+               newComplement.style.display = "none";
+               newStreet.style.display = "none";
+               newNeighborhood.style.display = "none";
+               newCep.style.display = "none";
+               newcity.style.display = "none";
+               newState.style.display = "none";
                break;
      }
 }
