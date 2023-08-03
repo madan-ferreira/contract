@@ -33,7 +33,9 @@ import {
      spouseNation,
      spouseRegistered,
      getUnitCity,
-     getUnitState
+     getUnitState,
+     franchiseeFileName,
+     businessCityFileName
 } from "./get.values.js";
 const fontSize = 10;
 const lineSpacing = 10;
@@ -451,7 +453,7 @@ O Franqueado aceita os termos e condições contidos neste anexo.`,
      }
      // ####################################################################### End attachments  #######################################################################################################
 
-     doc.save(`test.pdf`);
+     doc.save(`${getContractNumber}_${businessCityFileName}_Franchise contract_Aist_${franchiseeFileName}.pdf`);
 }
 
 const isBoldOpen = (arrayLength, valueBefore = false) => {

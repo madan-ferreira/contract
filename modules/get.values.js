@@ -44,7 +44,9 @@ var getContractNumber,
      getBirth,
      getBusinessState,
      getUnitCity,
-     getUnitState;
+     getUnitState,
+     franchiseeFileName,
+     businessCityFileName;
 
 export function getInfo() {
      getContractNumber = document.getElementById("new-contract-number").value;
@@ -95,6 +97,9 @@ export function getInfo() {
      getbusinessCep = document.getElementById("new-business-cep").value;
      getBusinessComplement = document.getElementById("new-business-complement").value;
      getBusinessState = document.getElementById("new-business-state").value;
+
+     franchiseeFileName = getFranchisee.replace(/ /g, "_");
+     businessCityFileName = getUnitCity.replace(/ /g, "_");
 
      if (selectGender.value == "1" && selectSpouse.value == "1") {
           genderStatus = "casado";
@@ -198,5 +203,7 @@ export {
      spouseRegistered,
      genderStatus,
      getUnitCity,
-     getUnitState
+     getUnitState,
+     franchiseeFileName,
+     businessCityFileName
 };
