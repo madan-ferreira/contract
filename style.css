@@ -1,0 +1,118 @@
+html {
+     margin: 0;
+
+     height: 100%;
+}
+#body {
+     display: flex;
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: #1d2021;
+     background-image: url("wood.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+}
+#private-data {
+     width: 90%;
+     height: 100%;
+     padding: 0px;
+     margin: 0px;
+
+}
+#bank-data-container,
+#personal-spouse-container,
+#personal-client-container,
+#contract-info-container,
+#company-data-container {
+     margin-left: 5px;
+     margin-right: 5px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 100%;
+     justify-content: flex-start;
+     border: solid 2px;
+     border-radius: 10px;
+     border-color: #ebdbb2;
+     gap: 5px;
+}
+
+h3{
+     background-color: #ebdbb2;
+     justify-self: flex-start;
+     border-radius: 5px;
+     padding: 5px;
+}
+
+#div-btn {
+     display: flex;
+     flex-direction: row;
+
+     justify-content: space-evenly;
+     gap: 20px;
+     grid-area: foot;
+}
+
+#selection-container{
+     display: flex;
+     flex-direction: column-reverse;
+     align-items: center;
+     justify-content: center;
+     width: 50%;
+     height: 60%;
+     background-color: rgb(60, 56, 54, 0.8);
+     border-radius: 10px;
+}
+#private-data {
+     width: 95%;
+     height: 95%;
+     padding: 10px 10px 0px 10px;
+     
+     background-color: rgb(60, 56, 54, 0.8);
+     border-radius: 10px;
+}
+
+#private-legal-container-btn{
+     display: flex;
+     flex-direction: row;
+     gap: 10px;
+}
+
+#select-spouse{
+     text-align: center;
+}
+
+#label-check-legal {
+     padding-right: 5px;
+}
+
+.btn {
+     align-self: center;
+     margin: 0;
+     margin-bottom: 10px;
+     height: 30px;
+     width: 120px;
+     border-radius: 5px;
+     border: none;
+     background-color: #ebdbb2;
+     color: #3c3836;
+     font-weight: bold;
+}
+
+input {
+     width: 95%;
+     text-align: center;
+}
+#new-business-number,
+#new-year {
+     width: 40px;
+}
+#select-price{
+     width: 95%;
+     margin: 0px;
+}

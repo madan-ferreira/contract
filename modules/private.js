@@ -379,7 +379,6 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
      } else {
           foot = [[" \n \n________________________________\npp. Felipe Burgel Paladine ", ` \n \n_______________________________\n${getFranchisee} \n MII/SELO`]];
      }
-     console.log(doc.getFontList());
      doc.autoTable({
           theme: "plain",
           bodyStyles: { halign: "left", lineWidth: 0.5, lineColor: [0, 0, 0] },
