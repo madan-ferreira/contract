@@ -152,7 +152,7 @@ infrações por parte do Licenciado. O número de prorrogações do Contrato é 
      clauseOff = clauseOff + 20;
      doc.setFontStyle("normal").text(
           `2.1 A título de processo de embarque, para conectar ao sistema do Franqueador, o Franqueado realizará o pagamento de uma quantia
-não reembolsável de R$ ${getPrice}, no prazo máximo de até 10 dias\napós a assinatura do contrato.
+não reembolsável de R$ ${getPrice}, no prazo máximo de até 10\ndias após a assinatura do contrato.
 2.2 O Franqueado compromete-se a pagar ao Franqueador uma taxa de licença (royalty), de acordo com o Anexo No. 1 do presente
 Contrato.
 2.3 O pagamento pela prestação de Funcionalidade adicional será acordado pelas Partes no sistema do Franqueador e é refletido no
@@ -347,6 +347,11 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
      // ####################################################################### End of Seventh clause  #######################################################################################################
 
      // ####################################################################### Table  #######################################################################################################
+     clauseOff = titleY + 225;
+     doc.setFontStyle("bold")
+          .setFontSize(fontSize)
+          .text("8. Endereço e informações bancárias", pageWidth / 2 + 30, clauseOff, { align: "center" });
+     
      clauseOff = clauseOff + 30;
      var head = [["Franqueador", "Franqueado"]];
      var body = [
@@ -358,29 +363,30 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
      if (selectSpouse.value == "1") {
           foot = [
                [
-                    "________________________________\npp. Felipe Burgel Paladine ",
-                    `_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
+                    " \n \n________________________________\npp. Felipe Burgel Paladine ",
+                    ` \n \n_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
                ],
           ];
      } else if (selectSpouse.value == "5") {
           foot = [
                [
-                    "________________________________\npp. Felipe Burgel Paladine ",
-                    `_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
+                    " \n \n________________________________\npp. Felipe Burgel Paladine ",
+                    ` \n \n_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
                ],
           ];
      } else {
-          foot = [["________________________________\npp. Felipe Burgel Paladine ", `_______________________________\n${getFranchisee} \n MII/SELO`]];
+          foot = [[" \n \n________________________________\npp. Felipe Burgel Paladine ", ` \n \n_______________________________\n${getFranchisee} \n MII/SELO`]];
      }
+     console.log(doc.getFontList());
      doc.autoTable({
           theme: "plain",
           bodyStyles: { halign: "left", lineWidth: 0.5, lineColor: [0, 0, 0] },
-          footStyles: { halign: "center", lineWidth: 0.5, lineColor: [0, 0, 0] },
+          footStyles: { halign: "center", lineWidth: 0.5, lineColor: [0, 0, 0], fontStyle: "normal" },
           headStyles: {
                lineWidth: 0.5,
                lineColor: [0, 0, 0],
           },
-          startY: 250,
+          startY: 260,
           head: head,
           body: body,
           foot: foot,
@@ -389,6 +395,7 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
 
      // ####################################################################### Attachments  #######################################################################################################
      doc.addPage();
+     doc.setFontStyle("normal");
      doc.text(`Anexo No.1`, pageWidth - 10, titleY);
 
      doc.text(`Contrato de franquia ${getContractNumber} – ${getDay}/${getMonth}/${getYear}`, pageWidth - 140, titleY + 10);

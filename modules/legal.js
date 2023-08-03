@@ -153,7 +153,7 @@ infrações por parte do Licenciado. O número de prorrogações do Contrato é 
      clauseOff = clauseOff + 20;
      doc.setFontStyle("normal").text(
           `2.1 A título de processo de embarque, para conectar ao sistema do Franqueador, o Franqueado realizará o pagamento de uma quantia
-não reembolsável de R$ ${getPrice}, no prazo máximo de até 10 dias\napós a assinatura do contrato.
+não reembolsável de R$ ${getPrice}, no prazo máximo de até 10\ndias após a assinatura do contrato.
 2.2 O Franqueado compromete-se a pagar ao Franqueador uma taxa de licença (royalty), de acordo com o Anexo No. 1 do presente
 Contrato.
 2.3 O pagamento pela prestação de Funcionalidade adicional será acordado pelas Partes no sistema do Franqueador e é refletido no
@@ -318,11 +318,11 @@ Lei 13.709/2018, garantindo, ainda, seguir a na íntegra a referida lei.`,
      doc.addPage();
      doc.text(
           `6.4 As Partes concordaram que para fins de fluxo de documentos, os endereços de e-mail de cada Parte especificados no Artigo 8 do
-          Contrato serão os endereços de e-mail oficiais para os quais as Partes poderão enviar documentos relacionados à execução do Contrato
-          (incluindo, mas não se limitando a, avisos, acordos, atos, relatórios, etc.) na forma de cópias digitalizadas de documentos com carimbos
-          e assinaturas obrigatórias das Partes (as Partes). Os documentos serão considerados recebidos pela Parte à qual são endereçados no
-          primeiro dia útil após a data de envio.
-          6.5 As mesmas regras se aplicam às mensagens e documentos recebidos/enviados através do pacote de software AIST.
+Contrato serão os endereços de e-mail oficiais para os quais as Partes poderão enviar documentos relacionados à execução do Contrato
+(incluindo, mas não se limitando a, avisos, acordos, atos, relatórios, etc.) na forma de cópias digitalizadas de documentos com carimbos
+e assinaturas obrigatórias das Partes (as Partes). Os documentos serão considerados recebidos pela Parte à qual são endereçados no
+primeiro dia útil após a data de envio.
+6.5 As mesmas regras se aplicam às mensagens e documentos recebidos/enviados através do pacote de software AIST.
 6.6 Todos os contratos anteriores celebrados entre as Partes, cujo objeto seja conceder ao Franqueado o direito de usar quaisquer
 elementos de propriedade intelectual especificados neste Contrato, deverão tornar-se nulos e sem efeito a partir da data de entrada em
 vigor deste Contrato.
@@ -348,6 +348,11 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
      // ####################################################################### End of Seventh clause  #######################################################################################################
 
      // ####################################################################### Table  #######################################################################################################
+     clauseOff = titleY + 225;
+     doc.setFontStyle("bold")
+          .setFontSize(fontSize)
+          .text("8. Endereço e informações bancárias", pageWidth / 2 + 30, clauseOff, { align: "center" });
+     
      clauseOff = clauseOff + 30;
      var head = [["Franqueador", "Franqueado"]];
      var body = [
@@ -357,21 +362,24 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
           ],
      ];
      if (selectSpouse.value == "1") {
+          doc.setFontStyle("normal");
           foot = [
                [
-                    "________________________________\npp. Felipe Burgel Paladine ",
-                    `_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
+                    " \n \n________________________________\npp. Felipe Burgel Paladine ",
+                    ` \n \n_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
                ],
           ];
      } else if (selectSpouse.value == "5") {
+          doc.setFontStyle("normal");
           foot = [
                [
-                    "________________________________\npp. Felipe Burgel Paladine ",
-                    `_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
+                    " \n \n________________________________\npp. Felipe Burgel Paladine ",
+                    ` \n \n_______________________________\n${getFranchisee} \n MII/SELO\n \n_______________________________\n${getSpouse} \n (anuente)`,
                ],
           ];
      } else {
-          foot = [["________________________________\npp. Felipe Burgel Paladine ", `_______________________________\n${getBusinessName} \n MII/SELO`]];
+          doc.setFontStyle("normal");
+          foot = [[" \n \n________________________________\npp. Felipe Burgel Paladine ", ` \n \n_______________________________\n${getBusinessName} \n MII/SELO`]];
      }
      doc.autoTable({
           theme: "plain",
@@ -381,7 +389,7 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
                lineWidth: 0.5,
                lineColor: [0, 0, 0],
           },
-          startY: 250,
+          startY: 260,
           head: head,
           body: body,
           foot: foot,
@@ -390,6 +398,7 @@ assinar este Contrato, o Franqueado confirma que leu e concorda com o conteúdo 
 
      // ####################################################################### Attachments  #######################################################################################################
      doc.addPage();
+     doc.setFontStyle("normal");
      doc.text(`Anexo No.1`, pageWidth - 10, titleY);
 
      doc.text(`Contrato de franquia ${getContractNumber} – ${getDay}/${getMonth}/${getYear}`, pageWidth - 140, titleY + 10);
