@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
      <head>
           <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="stylesheet" href="style.css" />
-          <script async type="module" src="gui.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.js"></script>
-          <title>Contract Maker</title>
+          <title>Calculadora de receitas e despesas</title>
+          <script type="module" src="main.js"></script>
      </head>
-     <body id="body">
-          
-     </body>
-</html>
+<body>
+  <table> 
+      <tr>
+               <td >Franchise Fee</td>
+               <td class="value">
+                    <input type="input" class="form__field" placeholder="R$" name="franchise-fee" id='franchiseFee' onblur="postF()" required />
+               </td>
+      </tr>
+   </table>
+</body>
